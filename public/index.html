@@ -23,10 +23,10 @@
 
     <!-- Search Box -->
     <div
-      class="SearchBox w-fit .5 border-b border-white flex justify-end items-center 2xl:w-1/3 2xl:h-20 2xl:px-4">
+      class="w-fit .5 border-b border-white flex justify-end items-center 2xl:w-1/3 2xl:h-20 2xl:px-4">
 
       <!-- Search Input -->
-      <input type="text" name="SearchLocation" id="search" placeholder="Search Location..."
+      <input type="text" name="SearchLocation" id="SearchBox" placeholder="Search Location..."
         class="placeholder:text-white/70 placeholder:text-xs lg:placeholder:text-lg xl:placeholder:text-2xl 2xl:placeholder:text-4xl placeholder:font-Roboto-Normal w-full md:w-48 lg:w-52 xl:w-64 2xl:w-full h-full outline-none focus:outline-none text-white text-xs md:text-xl xl:text-xl 2xl:text-2xl font-Roboto-Normal">
 
       <!-- Search Icon -->
@@ -48,14 +48,14 @@
       <div class="Location-Deatil w-[139px] h-10 relative flex flex-col gap-5">
 
         <!-- City Name -->
-        <p class="City w-[139px] h-[25.22px] flex justify-center items-center text-white text-3xl font-Roboto-Normal 2xl:text-5xl" id="City"></p>
+        <p class="City w-[139px] h-[25.22px] flex justify-center items-center text-white text-3xl font-Roboto-Normal 2xl:text-3xl" id="City"></p>
         <!-- Date and Time -->
         <p class="Date w-[139px] h-[8.70px] flex justify-start items-center text-white text-[10px] md:text-sm md:w-80 font-Roboto-Normal 2xl:text-[30px] 2xl:w-[27rem] 2xl:pt-10 2xl:justify-start" id="Date">06:09 - Monday, 9 Sep ‘23</p>
 
       </div>
 
       <!-- Weather Status Icon -->
-      <p class="WeatherImage md:text-[30px] lg:text-[35px] xl:text-[40px] 2xl:text-[50px] pb-7 2xl:relative 2xl:left-44" id="WeatherImage"></p>
+      <p class="WeatherImage text-white md:text-[30px] lg:text-[35px] xl:text-[40px] 2xl:text-[50px] pb-7 2xl:relative 2xl:left-44" id="WeatherImage"></p>
 
     </div>
 
@@ -71,8 +71,7 @@
       <div class="WeatherInfo flex flex-col gap-8 justify-center md:justify-start 2xl:relative 2xl:top-5 items-center w-2xs md:w-[70%] md:h-[60%] 2xl:gap-9">
 
         <!-- Weather Status Description -->
-        <p class="text-center justify-start text-white text-sm md:text-[20px] 2xl:text-6xl font-Roboto-Medium uppercase md:w-full md:h-20 md:content-center" id="Description">thunderstorm with light
-          drizzle</p>
+        <p class="text-center justify-start text-white text-sm md:text-[20px] 2xl:text-6xl font-Roboto-Medium uppercase md:w-full md:h-20 md:content-center" id="Description"></p>
 
         <!-- Max Temperature -->
         <div class="TempMax flex justify-between items-center w-full">
@@ -159,12 +158,6 @@
           </div>
 
         </div>
-
-      </div>
-
-      <div class="Error w-full h-full hidden justify-center items-center absolute top-1/2">
-
-        <p class="text-9xl">❓❗️</p>
 
       </div>
 
