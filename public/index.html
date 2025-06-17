@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to CSS files -->
+  <link href="../src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/public/style.css">
+  <link rel="shortcut icon" href="/images/Logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/fontawesome-free-6.7.2-web/css/all.min.css">
+  <title>Weather Web</title>
+</head>
+
+<body class="">
+
+  <!-- Site Header -->
+  <header class="w-full h-20 2xl:h-32 flex justify-between items-center px-5 md:px-10 lg:px-20 xl:px-32 2xl:pr-32">
+
+    <!-- Site Logo -->
+    <img src="/images/Logo.svg" alt="Weather Web logo" class="md:size-16 lg:size-24 xl:size-24 2xl:size-36">
+
+    <!-- Search Box -->
+    <div
+      class="SearchBox w-fit .5 border-b border-white flex justify-end items-center 2xl:w-1/3 2xl:h-20 2xl:px-4">
+
+      <!-- Search Input -->
+      <input type="text" name="SearchLocation" id="search" placeholder="Search Location..."
+        class="placeholder:text-white/70 placeholder:text-xs lg:placeholder:text-lg xl:placeholder:text-2xl 2xl:placeholder:text-4xl placeholder:font-Roboto-Normal w-full md:w-48 lg:w-52 xl:w-64 2xl:w-full h-full outline-none focus:outline-none text-white text-xs md:text-xl xl:text-xl 2xl:text-2xl font-Roboto-Normal">
+
+      <!-- Search Icon -->
+      <i class="fas fa-search text-white md:text-lg 2xl:text-3xl" id="SearchIcon"></i>
+
+    </div>
+
+  </header>
+
+  <main class="w-full h-fit">
+
+    <!-- Weather and Location Display -->
+    <div class="Location-weather w-full h-20 flex justify-start items-center pl-5 absolute top-40 md:justify-center md:top-24 2xl:top-36 2xl:gap-10">
+
+      <!-- Temperature -->
+      <p class="Temp justify-start text-white text-[64px] 2xl:text-9xl font-Roboto-Normal" id="Temp"></p>
+
+      <!-- Location Details -->
+      <div class="Location-Deatil w-[139px] h-10 relative flex flex-col gap-5">
+
+        <!-- City Name -->
+        <p class="City w-[139px] h-[25.22px] flex justify-center items-center text-white text-3xl font-Roboto-Normal 2xl:text-5xl" id="City"></p>
+        <!-- Date and Time -->
+        <p class="Date w-[139px] h-[8.70px] flex justify-start items-center text-white text-[10px] md:text-sm md:w-80 font-Roboto-Normal 2xl:text-[30px] 2xl:w-[27rem] 2xl:pt-10 2xl:justify-start" id="Date">06:09 - Monday, 9 Sep ‘23</p>
+
+      </div>
+
+      <!-- Weather Status Icon -->
+      <p class="WeatherImage md:text-[30px] lg:text-[35px] xl:text-[40px] 2xl:text-[50px] pb-7 2xl:relative 2xl:left-44" id="WeatherImage"></p>
+
+    </div>
+
+    <!-- Weather Details Section -->
+    <div
+      class="bgBlur w-full h-7/12 bg-white/5 border-t-[5px] border-white/10 backdrop-blur-[9.50px] absolute bottom-0 flex flex-col justify-start items-center">
+
+      <!-- Weather Details Title -->
+      <p class="WeatherDetails w-full h-20 flex justify-center items-center text-white text-sm md:text-xl 2xl:text-6xl font-Roboto-Normal">
+        Weather Details...</p>
+
+      <!-- Weather Information -->
+      <div class="WeatherInfo flex flex-col gap-8 justify-center md:justify-start 2xl:relative 2xl:top-5 items-center w-2xs md:w-[70%] md:h-[60%] 2xl:gap-9">
+
+        <!-- Weather Status Description -->
+        <p class="text-center justify-start text-white text-sm md:text-[20px] 2xl:text-6xl font-Roboto-Medium uppercase md:w-full md:h-20 md:content-center" id="Description">thunderstorm with light
+          drizzle</p>
+
+        <!-- Max Temperature -->
+        <div class="TempMax flex justify-between items-center w-full">
+
+          <p class="Temp-max text-white/70 2xl:text-3xl">Temp max</p>
+
+          <div class="TempMaxDetail flex justify-between items-center gap-2">
+
+            <p class="text-sm font-Roboto-Normal text-white 2xl:text-3xl" id="MaxTemp"></p>
+            <img src="/images/TempMax.svg" alt="Temp max" class="2xl:size-10">
+
+          </div>
+
+        </div>
+
+        <!-- Min Temperature -->
+        <div class="TempMin flex justify-between items-center w-full">
+
+          <div class="Temp-Min flex justify-between items-center w-full">
+
+            <p class="Temp-min text-white/70 2xl:text-3xl">Temp min</p>
+
+            <div class="TempMinDetail flex justify-between items-center gap-2">
+
+              <p class="text-sm font-Roboto-Normal text-white 2xl:text-3xl" id="MinTemp"></p>
+              <img src="/images/TempMin.svg" alt="Temp min" class="2xl:size-10">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Humidity -->
+        <div class="Humidity flex justify-between items-center w-full">
+
+          <div class="Humadity flex justify-between items-center w-full">
+
+            <p class="huminity text-white/70 2xl:text-3xl">Humidity</p>
+
+            <div class="HumadityDetail flex justify-between items-center gap-2">
+
+              <p class="text-sm font-Roboto-Normal text-white 2xl:text-3xl" id="Humidity"></p>
+              <img src="/images/Humidity.svg" alt="Humidity" class="2xl:size-10">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Cloudiness -->
+        <div class="Cloudy flex justify-between items-center w-full">
+
+          <div class="cloudy flex justify-between items-center w-full">
+
+            <p class="Cloud text-white/70 2xl:text-3xl">Cloudy</p>
+
+            <div class="CloudyDetail flex justify-between items-center gap-2">
+
+              <p class="text-sm font-Roboto-Normal text-white 2xl:text-3xl" id="Cloudy"></p>
+              <img src="/images/Cloudy.svg" alt="cloudy" class="2xl:size-10">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Wind Speed -->
+        <div class="Wind flex justify-between items-center w-full">
+
+          <div class="wind flex justify-between items-center w-full">
+
+            <p class="WIND text-white/70 2xl:text-3xl">Wind</p>
+
+            <div class="WindDetail flex justify-between items-center gap-2">
+
+              <p class="text-sm font-Roboto-Normal text-white 2xl:text-3xl" id="Wind"></p>
+              <img src="/images/Wind.svg" alt="Wind" class="2xl:size-10">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="Error w-full h-full hidden justify-center items-center absolute top-1/2">
+
+        <p class="text-9xl">❓❗️</p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- JavaScript file -->
+  <script src="app.js"></script>
+</body>
+
+</html>

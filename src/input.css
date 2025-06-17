@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Roboto-Normal;
+    src: url('/fonts/Roboto/static/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('/fonts/Roboto/static/Roboto-Medium.ttf');
+}
+
+
+@import "tailwindcss";
+
+
+@theme {
+    --font-Roboto-Normal: "Roboto-Normal";
+    --font-Roboto-Medium: "Roboto-Medium";
+
+
+}
