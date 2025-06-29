@@ -44,7 +44,7 @@ async function Weather(city = "Tehran") {
     }
 }
 
-Weather("تهران");
+Weather();
 
 $("SearchIcon").onclick = () => Weather($("SearchBox").value.trim());
 $("SearchBox").onkeypress = e => {
